@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var prevMonday = new Date();
+            prevMonday.setDate(prevMonday.getDate() - (prevMonday.getDay() + 6) % 7);
+            let currentDay= String(prevMonday.getDate()).padStart(2, '0');
+            let currentMonth = String(prevMonday.getMonth()+1).padStart(2,"0");
+            let currentYear = prevMonday.getYear() - 100;
+            var bracketURL = "https://thecavefairfax.challonge.com/meleesingles" + currentMonth + currentDay + currentYear;
+            window.location.replace(bracketURL);
+        </script>
+    </body>
+</html>
